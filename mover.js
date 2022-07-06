@@ -4,6 +4,7 @@ class Mover{
         this.vel = p5.Vector.random2D();
         this.vel.mult(random(5));
     }
+    
     update(){
         let mouse = createVector(mouseX,mouseY);
         this.acc = p5.Vector.sub(mouse,this.pos);
@@ -11,8 +12,6 @@ class Mover{
         this.vel.add(this.acc);
         this.vel.limit(5);
         this.pos.add(this.vel);
-        
-       
     }
     
     show(){
